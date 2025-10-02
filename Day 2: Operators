@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Solution{
+    Scanner sc=new Scanner(System.in);
+    
+    private double meal_cost=sc.nextDouble();
+    private int tip_percent=sc.nextInt();
+    private int tax_percent=sc.nextInt();
+    
+    public void sum(){
+        double a=(tip_percent * meal_cost) / 100;
+        double b=(tax_percent * meal_cost) / 100;
+        double c=meal_cost+a+b;
+        
+        int total_cost=(int) Math.round(c);
+        
+        System.out.println(total_cost);
+    }
+    
+    public static void main(String[] args){
+        Solution s=new Solution();
+        s.sum();
+    }
+}
